@@ -9,3 +9,5 @@ I had asked Shane a question but had no answer, so I assumed category_1 and cate
 I proceeded to group the categories by followers and then by engagement, created an endpoint for each request and tested them with Postman to see if everything was ok.
 
 Later I proceeded to print them on the screen.
+
+I didn't do it with TypeScript due to time issues, but it would only be necessary to modify it. Strictly speaking, it will work the same way.
