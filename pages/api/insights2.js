@@ -92,37 +92,25 @@ handler.get(async (req, res) => {
 
     fixJson(data);
 
-    const groupedByCat1 = groupBy(data, 'category_1');
-    const groupedByCat2 = groupBy(data, 'category_2');
+    const groupedByCat1 = groupBy(data, 'Audience country(mostly)');
 
     let salida = [];
 
     for (let cat in groupedByCat1) {
-      const maxPpg = getMaximo(groupedByCat1[cat], 'Followers');
+      const maxPpg = getMaximo(groupedByCat1[cat], 'Engagement avg\r\n');
       salida = [
         ...salida,
         {
           cat,
           influencerName: maxPpg['Influencer insta name'],
-          followers: maxPpg['Followers'],
-        },
-      ];
-    }
-    for (let cat in groupedByCat2) {
-      const maxPpg = getMaximo(groupedByCat2[cat], 'Followers');
-
-      salida = [
-        ...salida,
-        {
-          cat,
-          influencerName: maxPpg['Influencer insta name'],
-          followers: maxPpg['Followers'],
+          engagement: maxPpg['Engagement avg\r\n'],
         },
       ];
     }
 
     res.json(salida);
   } catch (error) {
+    console.log('error', error);
     res.status(400).send({ msg: 'error' });
   }
 });
