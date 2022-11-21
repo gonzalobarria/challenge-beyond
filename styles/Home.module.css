@@ -1,22 +1,45 @@
 .app {
   display: flex;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .title {
   padding-bottom: 20px;
-  padding-top: 10px;
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 1px solid rgba(210, 20, 20, 0.8);
+}
 .tabla {
   display: grid;
   grid-template-columns: auto auto auto;
+  border: 1px solid rgba(210, 20, 20, 0.8);
 }
 .item {
-  border: 1px solid rgba(210, 20, 20, 0.8);
+  /* border: 1px solid rgba(210, 20, 20, 0.8); */
   padding: 10px;
-  text-align: center;
+  text-align: left;
+  width: 300px;
+}
+.tabla:hover {
+  background-color: #f5f5f5;
+  color: #000;
+  font-weight: 600;
+}
+
+.right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: 700;
 }
